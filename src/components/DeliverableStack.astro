@@ -1,0 +1,137 @@
+---
+// src/components/DeliverableStack.astro
+---
+
+<section class="py-24 bg-[#070B14] text-white relative" id="deliverables">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Section Header -->
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-telemetry uppercase tracking-wider mb-4">
+        The Engineering Artifact
+      </div>
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-white">
+        Not Just a Checklist. A Comprehensive Texas PE Stamped Engineering Portfolio.
+      </h2>
+      <p class="mt-4 text-slate-300 text-base sm:text-lg">
+        Legally binding, scientifically mapped, and recognized by every municipal building department and mortgage lender across Texas.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+      
+      <!-- Left Side: Interactive CAD Blueprint Map Viewer (6 Cols) -->
+      <div class="lg:col-span-6 glass-card rounded-3xl p-6 sm:p-8 border border-slate-700/80 shadow-2xl relative overflow-hidden">
+        
+        <div class="flex items-center justify-between pb-4 border-b border-slate-800 text-xs font-telemetry text-slate-300">
+          <span class="font-bold text-white uppercase tracking-wider">CAD ELEVATION BLUEPRINT SAMPLE</span>
+          <span class="text-blue-400">CALIBRATION: ±0.01"</span>
+        </div>
+
+        <!-- Simulated CAD Canvas Blueprint -->
+        <div class="mt-6 p-6 rounded-2xl bg-[#030712] border border-blue-900/40 relative overflow-hidden">
+          <div class="absolute inset-0 bg-blueprint-grid opacity-50"></div>
+
+          <!-- Elevation Contour Vector Lines -->
+          <svg class="relative z-10 w-full h-64" viewBox="0 0 320 220" fill="none">
+            <!-- Perimeter Foundation Footprint -->
+            <rect x="20" y="20" width="280" height="180" rx="4" stroke="#3B82F6" stroke-width="2" stroke-dasharray="4,4" fill="rgba(59, 130, 246, 0.03)" />
+            
+            <!-- Interior Load-bearing walls -->
+            <line x1="120" y1="20" x2="120" y2="140" stroke="#475569" stroke-width="3" />
+            <line x1="120" y1="140" x2="220" y2="140" stroke="#475569" stroke-width="3" />
+
+            <!-- Elevation Contour Contours -->
+            <path d="M 30,50 Q 100,70 180,40 T 290,60" stroke="#10B981" stroke-width="1.5" />
+            <path d="M 30,110 Q 120,130 200,100 T 290,120" stroke="#3B82F6" stroke-width="1.5" />
+            <path d="M 30,170 Q 140,190 220,160 T 290,180" stroke="#EF4444" stroke-width="1.5" />
+
+            <!-- Elevation Hotspot Callout 1 -->
+            <circle cx="60" cy="50" r="5" fill="#10B981" />
+            <text x="70" y="54" fill="#A7F3D0" font-size="10" font-family="monospace">P1: +0.10"</text>
+
+            <!-- Elevation Hotspot Callout 2 -->
+            <circle cx="160" cy="110" r="5" fill="#3B82F6" />
+            <text x="170" y="114" fill="#93C5FD" font-size="10" font-family="monospace">P2: -0.25"</text>
+
+            <!-- Elevation Hotspot Callout 3 (Deflection) -->
+            <circle cx="260" cy="170" r="6" fill="#EF4444" />
+            <text x="220" y="205" fill="#FCA5A5" font-size="10" font-family="monospace">P3: -0.85" (Deflection)</text>
+          </svg>
+
+          <!-- Watermark PE Certification -->
+          <div class="mt-4 pt-4 border-t border-slate-800/80 flex items-center justify-between text-xs font-telemetry">
+            <span class="text-slate-400">STATE OF TEXAS LICENSED PE:</span>
+            <span class="px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400 font-bold border border-emerald-500/20">
+              OFFICIAL PE SEAL ATTACHED
+            </span>
+          </div>
+        </div>
+
+        <p class="mt-4 text-xs text-slate-400 text-center font-telemetry">
+          Interactive CAD contours visualize exact millimeter slopes and room-by-room elevations.
+        </p>
+
+      </div>
+
+      <!-- Right Side: 4 Core Deliverables Stack (6 Cols) -->
+      <div class="lg:col-span-6 space-y-4">
+        
+        <!-- Deliverable 1 -->
+        <div class="glass-card rounded-2xl p-6 border border-slate-700/80 flex items-start gap-4">
+          <div class="w-10 h-10 rounded-xl bg-blue-600/20 text-blue-400 font-black flex items-center justify-center shrink-0 border border-blue-500/30 text-sm font-telemetry">
+            01
+          </div>
+          <div>
+            <h4 class="text-lg font-bold text-white mb-1">Digital Manometer Elevation Mapping</h4>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Using electronic manometer systems, we record floor levels across every interior room. This produces a calibrated elevation contour map showing exact foundation shifts down to 0.01 of an inch.
+            </p>
+          </div>
+        </div>
+
+        <!-- Deliverable 2 -->
+        <div class="glass-card rounded-2xl p-6 border border-slate-700/80 flex items-start gap-4">
+          <div class="w-10 h-10 rounded-xl bg-emerald-600/20 text-emerald-400 font-black flex items-center justify-center shrink-0 border border-emerald-500/30 text-sm font-telemetry">
+            02
+          </div>
+          <div>
+            <h4 class="text-lg font-bold text-white mb-1">Official Texas PE Stamped Engineering Report</h4>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Signed and sealed by a licensed Professional Engineer in the State of Texas. Provides complete legal standing for real estate negotiations, insurance disputes, and municipal building departments.
+            </p>
+          </div>
+        </div>
+
+        <!-- Deliverable 3 -->
+        <div class="glass-card rounded-2xl p-6 border border-slate-700/80 flex items-start gap-4">
+          <div class="w-10 h-10 rounded-xl bg-purple-600/20 text-purple-400 font-black flex items-center justify-center shrink-0 border border-purple-500/30 text-sm font-telemetry">
+            03
+          </div>
+          <div>
+            <h4 class="text-lg font-bold text-white mb-1">Independent Remediation Specifications</h4>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              If your foundation is healthy, we state it clearly in writing to stop repair companies from selling you useless work. If movement has occurred, we provide exact engineering specs so contractors bid on the true need.
+            </p>
+          </div>
+        </div>
+
+        <!-- Deliverable 4 -->
+        <div class="glass-card rounded-2xl p-6 border border-slate-700/80 flex items-start gap-4">
+          <div class="w-10 h-10 rounded-xl bg-amber-600/20 text-amber-400 font-black flex items-center justify-center shrink-0 border border-amber-500/30 text-sm font-telemetry">
+            04
+          </div>
+          <div>
+            <h4 class="text-lg font-bold text-white mb-1">Same-Day Digital PDF Delivery</h4>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              In a fast-moving DFW real estate transaction, time is equity. Your final stamped documentation is delivered electronically the same day so you never miss a 5-day option period deadline.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>

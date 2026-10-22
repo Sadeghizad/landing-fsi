@@ -1,0 +1,222 @@
+---
+// src/components/BookingTerminal.astro
+---
+
+<section class="py-24 bg-[#0B111E] text-white relative" id="schedule">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <div class="glass-card rounded-3xl p-8 sm:p-14 border border-slate-700/80 shadow-2xl relative overflow-hidden">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left Column: The Grand Slam Summary (5 Cols) -->
+        <div class="lg:col-span-5 space-y-6">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-500/10 border border-blue-400/20 text-blue-300 text-xs font-telemetry uppercase tracking-wider">
+            Fast Same-Day Scheduling
+          </div>
+
+          <h2 class="text-3xl sm:text-4xl font-black text-white tracking-tight">
+            Secure Your Inspection Slot Today.
+          </h2>
+
+          <p class="text-sm sm:text-base text-slate-300 leading-relaxed">
+            Whether you are inside a critical 5-day option period or evaluating structural modifications to your building, our Texas Licensed Professional Engineers respond promptly.
+          </p>
+
+          <div class="space-y-3 pt-2 text-xs font-telemetry text-slate-300">
+            <div class="flex items-center gap-2.5">
+              <span class="w-5 h-5 rounded-md bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold">✓</span>
+              <span>100% Texas Licensed Professional Engineer Review</span>
+            </div>
+            <div class="flex items-center gap-2.5">
+              <span class="w-5 h-5 rounded-md bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold">✓</span>
+              <span>Same-Day Digital Stamped Report Delivery</span>
+            </div>
+            <div class="flex items-center gap-2.5">
+              <span class="w-5 h-5 rounded-md bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold">✓</span>
+              <span>Digital Manometer Elevation Mapping Included</span>
+            </div>
+            <div class="flex items-center gap-2.5">
+              <span class="w-5 h-5 rounded-md bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold">✓</span>
+              <span>0% Foundation Repair Sales Conflict of Interest</span>
+            </div>
+          </div>
+
+          <div class="pt-6 border-t border-slate-800 text-xs font-telemetry space-y-2 text-slate-400">
+            <p>Direct Inquiries: <strong class="text-white">Info@foundationstructureinspection.com</strong></p>
+            <p>Hours: <strong class="text-white">Monday – Saturday: 8:00 AM – 6:00 PM</strong></p>
+            <p>Coverage: <strong class="text-white">Dallas, Tarrant, Collin, Denton & Surrounding Cities</strong></p>
+          </div>
+        </div>
+
+        <!-- Right Column: Frictionless Intake Form (7 Cols) -->
+        <div class="lg:col-span-7 bg-[#030712] p-8 sm:p-10 rounded-2xl border border-slate-800 shadow-xl">
+          <h3 class="text-xl font-bold text-white mb-2">Engineering Dispatch Intake</h3>
+          <p class="text-xs text-slate-400 font-telemetry mb-6">Fill out your property details. We confirm your inspection slot promptly.</p>
+
+          <form id="dispatch-form" action="https://formsubmit.co/mahmoudi.6486@gmail.com" method="POST" class="space-y-5">
+            <!-- FormSubmit Anti-Spam & Configuration -->
+            <input type="hidden" name="_subject" value="New FSI Foundation Inspection Request!" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_template" value="table" />
+            <input type="text" name="_honey" style="display:none" />
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+              <div>
+                <label for="name" class="block text-xs font-telemetry uppercase tracking-wider text-slate-400 mb-2">Your Name *</label>
+                <input 
+                  type="text" 
+                  id="name" 
+                  name="Name" 
+                  required 
+                  placeholder="Full Name" 
+                  class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 text-base text-white placeholder-slate-500 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all"
+                />
+              </div>
+
+              <div>
+                <label for="email" class="block text-xs font-telemetry uppercase tracking-wider text-slate-400 mb-2">Your Email *</label>
+                <input 
+                  type="email" 
+                  id="email" 
+                  name="Email" 
+                  required 
+                  placeholder="name@example.com" 
+                  class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 text-base text-white placeholder-slate-500 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all"
+                />
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+              <div>
+                <label for="phone" class="block text-xs font-telemetry uppercase tracking-wider text-slate-400 mb-2">Phone Number *</label>
+                <input 
+                  type="tel" 
+                  id="phone" 
+                  name="Phone" 
+                  inputmode="tel"
+                  required 
+                  placeholder="(945) 000-0000" 
+                  class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 text-base text-white placeholder-slate-500 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all"
+                />
+              </div>
+
+              <div>
+                <label for="service-type" class="block text-xs font-telemetry uppercase tracking-wider text-slate-400 mb-2">Inspection Category *</label>
+                <select 
+                  id="service-type" 
+                  name="InspectionCategory" 
+                  class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 text-base text-white focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all"
+                >
+                  <option value="Single Family Residential">Single Family Residential (Option Period / Due Diligence)</option>
+                  <option value="Commercial Inspections">Commercial & Industrial Inspections</option>
+                  <option value="Multi Family Residential">Multi Family Residential & Townhomes</option>
+                  <option value="New Construction">New Construction & Pre-Pour Phase Reviews</option>
+                  <option value="Remodeling Wall Removal">Remodeling Structural Reviews & Wall Removals</option>
+                  <option value="Additions & Expansions">Additions & Foundation Tying Evaluations</option>
+                </select>
+              </div>
+            </div>
+
+            <div>
+              <label for="property-address" class="block text-xs font-telemetry uppercase tracking-wider text-slate-400 mb-2">Property Address & DFW City *</label>
+              <input 
+                type="text" 
+                id="property-address" 
+                name="PropertyAddress" 
+                required 
+                autocomplete="street-address"
+                placeholder="e.g. 1234 Preston Rd, Dallas, TX 75252" 
+                class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 text-base text-white placeholder-slate-500 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all"
+              />
+            </div>
+
+            <div>
+              <label for="notes" class="block text-xs font-telemetry uppercase tracking-wider text-slate-400 mb-2">Option Period Deadline / Property Notes</label>
+              <textarea 
+                id="notes" 
+                name="Notes" 
+                rows="3" 
+                placeholder="e.g. Under contract; 5-day option period ends this Thursday. Looking for same-day report."
+                class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 text-base text-white placeholder-slate-500 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all"
+              ></textarea>
+            </div>
+
+            <button 
+              id="submit-btn"
+              type="submit" 
+              class="w-full py-4 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-extrabold text-sm sm:text-base shadow-xl shadow-blue-600/35 border border-blue-400/30 transition-all hover:-translate-y-0.5 active:translate-y-0 cursor-pointer flex items-center justify-center gap-2"
+            >
+              <span id="btn-text">Submit Inspection Request →</span>
+              <span id="btn-spinner" class="hidden w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></span>
+            </button>
+
+            <div class="text-center text-[11px] font-telemetry text-slate-400 flex items-center justify-center gap-2">
+              <span>🔒 Direct Dispatch to mahmoudi.6486@gmail.com</span>
+              <span>•</span>
+              <span>Complies with Texas Board of Professional Engineers</span>
+            </div>
+          </form>
+
+          <div id="form-success-msg" class="hidden mt-4 p-4 rounded-xl bg-emerald-950/80 border border-emerald-500/40 text-emerald-300 text-xs text-center font-telemetry">
+            ✓ Request received! Your inspection details have been sent to our engineering dispatch team at mahmoudi.6486@gmail.com. We will contact you immediately.
+          </div>
+          <div id="form-error-msg" class="hidden mt-4 p-4 rounded-xl bg-red-950/80 border border-red-500/40 text-red-300 text-xs text-center font-telemetry">
+            ✕ There was a temporary issue sending your request. Please email us directly at <a href="mailto:mahmoudi.6486@gmail.com" class="underline font-bold">mahmoudi.6486@gmail.com</a>.
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('dispatch-form') as HTMLFormElement | null;
+    const successMsg = document.getElementById('form-success-msg');
+    const errorMsg = document.getElementById('form-error-msg');
+    const submitBtn = document.getElementById('submit-btn') as HTMLButtonElement | null;
+    const btnText = document.getElementById('btn-text');
+    const btnSpinner = document.getElementById('btn-spinner');
+
+    if (form) {
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        
+        if (submitBtn) submitBtn.disabled = true;
+        if (btnText) btnText.textContent = 'Submitting Request...';
+        if (btnSpinner) btnSpinner.classList.remove('hidden');
+        if (errorMsg) errorMsg.classList.add('hidden');
+
+        try {
+          const formData = new FormData(form);
+          const response = await fetch(form.action, {
+            method: 'POST',
+            body: formData,
+            headers: {
+              'Accept': 'application/json'
+            }
+          });
+
+          if (response.ok) {
+            if (successMsg) successMsg.classList.remove('hidden');
+            form.reset();
+            successMsg?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+          } else {
+            // Fallback: standard submit if JSON endpoint fails
+            form.submit();
+          }
+        } catch (err) {
+          if (errorMsg) errorMsg.classList.remove('hidden');
+        } finally {
+          if (submitBtn) submitBtn.disabled = false;
+          if (btnText) btnText.textContent = 'Submit Inspection Request →';
+          if (btnSpinner) btnSpinner.classList.add('hidden');
+        }
+      });
+    }
+  });
+</script>

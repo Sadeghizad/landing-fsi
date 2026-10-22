@@ -1,0 +1,165 @@
+---
+// src/components/Hero.astro
+import TriageIsland from './TriageIsland.astro';
+---
+
+<section class="relative min-h-[92vh] flex flex-col justify-between pt-12 pb-16 overflow-hidden bg-[#070B14] text-white">
+  <!-- CAD Blueprint Grid Background -->
+  <div class="absolute inset-0 bg-blueprint-grid opacity-35 pointer-events-none"></div>
+  
+  <!-- Subtle Ambient Glows -->
+  <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[500px] bg-blue-600/10 rounded-full blur-[140px] pointer-events-none"></div>
+  <div class="absolute top-1/3 right-10 w-[400px] h-[400px] bg-red-600/5 rounded-full blur-[120px] pointer-events-none"></div>
+
+  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center pt-4">
+      
+      <!-- Left Column: Authority & Grand Slam Pitch (7 Cols) -->
+      <div class="lg:col-span-7 space-y-6">
+        <!-- PE Authority Badge -->
+        <div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-slate-900/90 border border-blue-500/30 text-blue-300 text-xs font-telemetry tracking-wider uppercase shadow-lg shadow-blue-900/20">
+          <span class="w-2 h-2 rounded-full bg-blue-400 animate-ping"></span>
+          <span>Texas Board of Professional Engineers Certified • DFW Area</span>
+        </div>
+
+        <!-- Monumental Headline -->
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-[1.08]">
+          Unbiased Foundation & Structural Inspections Backed by <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-sky-300 to-indigo-300">Texas PE Seals.</span>
+        </h1>
+
+        <!-- High-Conversion Value Subheadline -->
+        <p class="text-lg sm:text-xl text-slate-300 leading-relaxed font-normal max-w-2xl">
+          Never let a commission-driven foundation repair company diagnose your home. FSI delivers independent, scientific structural evaluations with electronic manometer floor-level mapping and same-day stamped engineering reports.
+        </p>
+
+        <!-- CTA Buttons -->
+        <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-2">
+          <a 
+            href="#schedule" 
+            class="inline-flex items-center justify-center px-8 py-4 rounded-xl font-extrabold text-base text-white bg-blue-600 hover:bg-blue-500 shadow-xl shadow-blue-600/35 border border-blue-400/30 transition-all hover:-translate-y-0.5 active:translate-y-0"
+          >
+            Book Your Inspection Now
+            <svg class="w-5 h-5 ml-2.5 -mr-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+            </svg>
+          </a>
+
+          <button 
+            type="button"
+            id="open-vsl-btn"
+            class="inline-flex items-center justify-center px-6 py-4 rounded-xl font-bold text-base text-slate-200 bg-slate-900/90 hover:bg-slate-800 border border-slate-700/80 shadow-md hover:border-blue-500/50 transition-all group"
+          >
+            <span class="w-6 h-6 rounded-full bg-blue-600/20 text-blue-400 flex items-center justify-center mr-2.5 group-hover:scale-110 group-hover:bg-blue-600 group-hover:text-white transition-all">
+              ▶
+            </span>
+            Watch 90-Sec Video Breakdown
+          </button>
+        </div>
+
+        <!-- Trust Badges Row -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-6 border-t border-slate-800/80 text-slate-300 text-xs font-telemetry">
+          <div class="flex items-center gap-2">
+            <svg class="w-4 h-4 text-emerald-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+            </svg>
+            <span>Same-Day Digital Reports</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <svg class="w-4 h-4 text-emerald-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+            </svg>
+            <span>0% Repair Sales Conflict</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <svg class="w-4 h-4 text-emerald-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+            </svg>
+            <span>±0.01" Digital Manometer</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column: 3D Diagnostic Telemetry Card (5 Cols) -->
+      <div class="lg:col-span-5 relative">
+        <!-- Brutalist Geometry Backdrop Container (Moodboard Image 2 & 4) -->
+        <div class="relative glass-card rounded-2xl p-6 border border-slate-700/70 shadow-2xl overflow-hidden border-l-4 border-l-red-500">
+          
+          <!-- Monospace Technical Header Strip -->
+          <div class="flex items-center justify-between pb-4 border-b border-slate-800 text-xs font-telemetry">
+            <div class="flex items-center gap-2 text-slate-300">
+              <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+              <span class="font-bold text-white uppercase tracking-wider">LIVE TELEMETRY AUDIT</span>
+            </div>
+            <span class="text-blue-400 uppercase tracking-widest text-[11px]">PE-SURVEY // DFW</span>
+          </div>
+
+          <!-- Digital Manometer Floor Simulation Map -->
+          <div class="my-5 p-5 rounded-xl bg-[#030712] border border-slate-800 relative overflow-hidden">
+            <div class="flex items-center justify-between mb-3 text-xs font-telemetry text-slate-400">
+              <span>Slab-on-Grade Elevation Map</span>
+              <span class="text-emerald-400 font-bold">±0.01" Accuracy</span>
+            </div>
+
+            <!-- Contour Elevation Graphic -->
+            <div class="relative h-44 rounded-lg bg-gradient-to-br from-slate-900 to-slate-950 border border-slate-800/80 flex items-center justify-center p-4">
+              <!-- Contour Lines Overlay -->
+              <svg class="absolute inset-0 w-full h-full opacity-40" viewBox="0 0 200 120" preserveAspectRatio="none">
+                <path d="M 0,40 Q 50,20 100,50 T 200,30" stroke="#3B82F6" stroke-width="1.5" fill="none" stroke-dasharray="3,3" />
+                <path d="M 0,70 Q 60,90 120,60 T 200,80" stroke="#EF4444" stroke-width="1.5" fill="none" />
+                <path d="M 0,100 Q 70,80 140,110 T 200,95" stroke="#10B981" stroke-width="1" fill="none" stroke-dasharray="2,2" />
+              </svg>
+
+              <!-- Real-time Hotspot Markers -->
+              <div class="absolute top-6 left-10 flex items-center gap-1.5 px-2 py-1 rounded bg-slate-900/90 border border-blue-500/40 text-[10px] font-telemetry text-blue-300">
+                <span class="w-1.5 h-1.5 rounded-full bg-blue-400"></span>
+                <span>Ref: 0.00"</span>
+              </div>
+
+              <div class="absolute bottom-8 right-8 flex items-center gap-1.5 px-2.5 py-1 rounded bg-red-950/90 border border-red-500/60 text-[10px] font-telemetry text-red-300">
+                <span class="w-1.5 h-1.5 rounded-full bg-red-400 animate-pulse"></span>
+                <span>Max Δ: -0.85"</span>
+              </div>
+
+              <!-- Center Diagnosis Badge -->
+              <div class="relative z-10 text-center bg-slate-950/85 backdrop-blur-md px-4 py-2.5 rounded-xl border border-slate-700/80 shadow-lg">
+                <p class="text-[11px] font-telemetry text-slate-400 uppercase tracking-wider">Engineering Verdict</p>
+                <p class="text-sm font-extrabold text-emerald-400">Seasonal Soil Heave Only</p>
+                <p class="text-[10px] text-slate-400">Zero Underpinning Required ($0)</p>
+              </div>
+            </div>
+
+            <!-- Stamped PE Seal Badge Overlay -->
+            <div class="mt-4 flex items-center justify-between text-xs font-telemetry bg-slate-900/80 p-2.5 rounded-lg border border-slate-800">
+              <span class="text-slate-300">Texas PE Seal:</span>
+              <span class="text-emerald-400 font-bold flex items-center gap-1">
+                <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                VERIFIED OBJECTIVE
+              </span>
+            </div>
+          </div>
+
+          <!-- Micro Property Card from Image 4 -->
+          <div class="p-3 rounded-xl bg-slate-900/90 border border-slate-800 flex items-center justify-between text-xs font-telemetry">
+            <div>
+              <p class="text-slate-400 text-[10px]">RECENT DFW OPTION PERIOD</p>
+              <p class="text-white font-bold text-xs">4,200 sqft Slab • Frisco, Collin Co.</p>
+            </div>
+            <span class="px-2 py-1 rounded bg-blue-500/10 text-blue-400 border border-blue-500/20 text-[10px] font-semibold">
+              Same-Day Delivered
+            </span>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+    <!-- The Futuristic Triage Island (Base of Hero, Image 5) -->
+    <div class="mt-14 w-full">
+      <TriageIsland />
+    </div>
+
+  </div>
+</section>

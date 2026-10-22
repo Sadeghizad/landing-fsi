@@ -1,0 +1,30 @@
+---
+// src/components/MobileStickyBar.astro
+---
+
+<!-- Fixed Bottom Conversion Dock (Mobile Only) -->
+<div class="fixed bottom-0 inset-x-0 z-50 md:hidden bg-[#070B14]/95 backdrop-blur-lg border-t border-slate-800 p-3 shadow-2xl">
+  <div class="max-w-md mx-auto grid grid-cols-5 gap-2.5 items-center">
+    <!-- Action 1: Email (2 cols = 40%) -->
+    <a 
+      href="mailto:Info@foundationstructureinspection.com" 
+      class="col-span-2 py-3 px-3 rounded-xl bg-slate-900 border border-slate-700 text-slate-200 text-center font-bold text-xs flex items-center justify-center gap-1.5 hover:bg-slate-800 transition-colors font-telemetry"
+    >
+      <svg class="w-4 h-4 text-blue-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+      </svg>
+      Email Us
+    </a>
+
+    <!-- Action 2: Schedule (3 cols = 60%) -->
+    <a 
+      href="#schedule" 
+      class="col-span-3 py-3 px-3 rounded-xl bg-blue-600 hover:bg-blue-500 text-white text-center font-extrabold text-xs shadow-lg shadow-blue-600/30 flex items-center justify-center gap-1 transition-all"
+    >
+      Schedule Inspection
+      <svg class="w-4 h-4 ml-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+      </svg>
+    </a>
+  </div>
+</div>

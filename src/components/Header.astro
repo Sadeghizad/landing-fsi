@@ -1,0 +1,73 @@
+---
+// src/components/Header.astro
+const currentPath = Astro.url.pathname;
+---
+
+<!-- Announcement Bar -->
+<div class="bg-[#070B14] text-slate-300 text-xs py-2 px-4 border-b border-slate-800/80 relative z-50">
+  <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+    <div class="flex items-center gap-2.5 font-telemetry text-[11px] tracking-wider text-slate-300">
+      <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400 font-semibold border border-emerald-500/20">
+        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+        SAME-DAY DISPATCH ACTIVE
+      </span>
+      <span class="hidden md:inline text-slate-600">|</span>
+      <span class="text-slate-300">Texas Board of Professional Engineers Certified (PE)</span>
+    </div>
+    <div class="flex items-center gap-4 text-xs font-medium">
+      <a href="mailto:Info@foundationstructureinspection.com" class="text-slate-300 hover:text-white transition-colors flex items-center gap-1.5 font-telemetry text-[11px]">
+        <svg class="w-3.5 h-3.5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+        </svg>
+        Info@foundationstructureinspection.com
+      </a>
+      <span class="text-slate-700 hidden sm:inline">•</span>
+      <span class="text-slate-400 text-[11px] hidden sm:inline font-telemetry">Mon–Sat 8:00 AM – 6:00 PM</span>
+    </div>
+  </div>
+</div>
+
+<!-- Sticky Main Navigation -->
+<header class="sticky top-0 z-40 bg-[#0B111E]/85 backdrop-blur-md border-b border-slate-800/80 transition-all duration-300" id="main-nav">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center h-20">
+      <!-- Monolithic Logo -->
+      <a href="/" class="flex items-center gap-3.5 group">
+        <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-blue-600 to-blue-800 flex items-center justify-center text-white font-extrabold text-xl shadow-lg shadow-blue-600/30 border border-blue-400/30 group-hover:scale-105 transition-transform duration-200">
+          FSI
+        </div>
+        <div>
+          <span class="block text-lg font-black text-white tracking-tight uppercase leading-tight">
+            Foundation Structure Inspection
+          </span>
+          <span class="block text-[11px] font-telemetry uppercase tracking-widest text-blue-400 font-semibold">
+            Texas Licensed PE • DFW Metroplex
+          </span>
+        </div>
+      </a>
+
+      <!-- Navigation Links -->
+      <nav class="hidden lg:flex items-center gap-1.5 font-medium text-sm text-slate-300">
+        <a href="#services" class="px-3 py-1.5 rounded-lg hover:text-white hover:bg-slate-800/60 transition-colors">Services</a>
+        <a href="#conflict" class="px-3 py-1.5 rounded-lg hover:text-white hover:bg-slate-800/60 transition-colors">The PE Advantage</a>
+        <a href="#deliverables" class="px-3 py-1.5 rounded-lg hover:text-white hover:bg-slate-800/60 transition-colors">CAD & Deliverables</a>
+        <a href="#showcase" class="px-3 py-1.5 rounded-lg hover:text-white hover:bg-slate-800/60 transition-colors">Field Audits</a>
+        <a href="#soil" class="px-3 py-1.5 rounded-lg hover:text-white hover:bg-slate-800/60 transition-colors">DFW Soil Science</a>
+        <a href="#faq" class="px-3 py-1.5 rounded-lg hover:text-white hover:bg-slate-800/60 transition-colors">FAQ</a>
+      </nav>
+
+      <!-- Action Cluster -->
+      <div class="flex items-center gap-4">
+        <a 
+          href="#schedule" 
+          class="inline-flex items-center justify-center px-5 py-2.5 rounded-xl font-bold text-sm text-white bg-blue-600 hover:bg-blue-500 shadow-lg shadow-blue-600/25 border border-blue-400/30 transition-all hover:scale-[1.02] active:scale-[0.98]"
+        >
+          Schedule Inspection
+          <svg class="w-4 h-4 ml-1.5 -mr-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</header>

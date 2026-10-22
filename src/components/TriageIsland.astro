@@ -1,0 +1,229 @@
+---
+// src/components/TriageIsland.astro
+---
+
+<div class="glass-card rounded-2xl p-5 sm:p-6 border border-slate-700/80 shadow-2xl relative overflow-hidden group">
+  <!-- Glowing subtle border highlight -->
+  <div class="absolute -top-10 left-1/2 -translate-x-1/2 w-80 h-10 bg-blue-500/20 blur-xl pointer-events-none"></div>
+
+  <!-- Header & Live Dispatch Bar -->
+  <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 mb-5 pb-4 border-b border-slate-800">
+    <div class="flex items-center gap-2.5">
+      <div class="w-7 h-7 rounded-lg bg-blue-600/20 text-blue-400 flex items-center justify-center font-bold text-xs border border-blue-500/30">
+        ⚡
+      </div>
+      <div>
+        <h3 class="text-sm font-extrabold text-white uppercase tracking-wider">
+          Interactive Inspection Triage Island
+        </h3>
+        <p class="text-xs text-slate-400">Configure your property parameters for instant turnaround estimate</p>
+      </div>
+    </div>
+
+    <div class="flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-telemetry">
+      <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+      <span id="triage-status-pill">SAME-DAY DISPATCH ACTIVE IN DALLAS & COLLIN</span>
+    </div>
+  </div>
+
+  <!-- Multi-Attribute Filter Matrix -->
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+    
+    <!-- Filter 1: Property Type -->
+    <div>
+      <label class="block text-[11px] font-telemetry uppercase tracking-wider text-slate-400 mb-2">
+        1. Select Property Type
+      </label>
+      <div class="grid grid-cols-2 gap-2" id="triage-types">
+        <button 
+          type="button" 
+          data-type="Single Family" 
+          class="triage-btn active px-3 py-2.5 rounded-xl text-xs font-semibold border transition-all text-left bg-blue-600 text-white border-blue-400 shadow-md shadow-blue-600/30"
+        >
+          Single Family
+        </button>
+        <button 
+          type="button" 
+          data-type="Commercial" 
+          class="triage-btn px-3 py-2.5 rounded-xl text-xs font-semibold border transition-all text-left bg-slate-900/80 text-slate-300 border-slate-700/80 hover:border-slate-500"
+        >
+          Commercial
+        </button>
+        <button 
+          type="button" 
+          data-type="Wall Removal" 
+          class="triage-btn px-3 py-2.5 rounded-xl text-xs font-semibold border transition-all text-left bg-slate-900/80 text-slate-300 border-slate-700/80 hover:border-slate-500"
+        >
+          Wall Removal
+        </button>
+        <button 
+          type="button" 
+          data-type="New Build" 
+          class="triage-btn px-3 py-2.5 rounded-xl text-xs font-semibold border transition-all text-left bg-slate-900/80 text-slate-300 border-slate-700/80 hover:border-slate-500"
+        >
+          New Build Phase
+        </button>
+      </div>
+    </div>
+
+    <!-- Filter 2: County / Region -->
+    <div>
+      <label class="block text-[11px] font-telemetry uppercase tracking-wider text-slate-400 mb-2">
+        2. DFW County / City
+      </label>
+      <div class="grid grid-cols-2 gap-2" id="triage-counties">
+        <button 
+          type="button" 
+          data-county="Dallas County" 
+          class="county-btn active px-3 py-2.5 rounded-xl text-xs font-semibold border transition-all text-left bg-blue-600 text-white border-blue-400 shadow-md shadow-blue-600/30"
+        >
+          Dallas Co.
+        </button>
+        <button 
+          type="button" 
+          data-county="Collin County" 
+          class="county-btn px-3 py-2.5 rounded-xl text-xs font-semibold border transition-all text-left bg-slate-900/80 text-slate-300 border-slate-700/80 hover:border-slate-500"
+        >
+          Collin Co.
+        </button>
+        <button 
+          type="button" 
+          data-county="Tarrant County" 
+          class="county-btn px-3 py-2.5 rounded-xl text-xs font-semibold border transition-all text-left bg-slate-900/80 text-slate-300 border-slate-700/80 hover:border-slate-500"
+        >
+          Tarrant Co.
+        </button>
+        <button 
+          type="button" 
+          data-county="Denton County" 
+          class="county-btn px-3 py-2.5 rounded-xl text-xs font-semibold border transition-all text-left bg-slate-900/80 text-slate-300 border-slate-700/80 hover:border-slate-500"
+        >
+          Denton Co.
+        </button>
+      </div>
+    </div>
+
+    <!-- Filter 3: Turnaround Urgency & Live Action -->
+    <div class="flex flex-col justify-between">
+      <div>
+        <label class="block text-[11px] font-telemetry uppercase tracking-wider text-slate-400 mb-2">
+          3. Inspection Urgency
+        </label>
+        <div class="flex gap-2" id="triage-urgency">
+          <button 
+            type="button" 
+            data-urgency="Active Option Period (Same-Day)" 
+            class="urgency-btn active flex-1 px-3 py-2.5 rounded-xl text-xs font-semibold border transition-all text-center bg-blue-600 text-white border-blue-400 shadow-md shadow-blue-600/30"
+          >
+            Option Period (Same-Day)
+          </button>
+          <button 
+            type="button" 
+            data-urgency="Standard Due Diligence" 
+            class="urgency-btn flex-1 px-3 py-2.5 rounded-xl text-xs font-semibold border transition-all text-center bg-slate-900/80 text-slate-300 border-slate-700/80 hover:border-slate-500"
+          >
+            Standard Due Diligence
+          </button>
+        </div>
+      </div>
+
+      <!-- Reactive Result Summary & Lock-In Button -->
+      <div class="mt-4 pt-3 border-t border-slate-800 flex items-center justify-between">
+        <div>
+          <p class="text-[11px] text-slate-400 font-telemetry">Estimated Turnaround:</p>
+          <p id="triage-result-text" class="text-xs font-extrabold text-emerald-400">
+            Same-Day Stamped PE Report
+          </p>
+        </div>
+        <a 
+          href="#schedule" 
+          id="triage-lockin-btn"
+          class="px-4 py-2 rounded-lg bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs shadow-md shadow-blue-600/30 transition-all"
+        >
+          Lock In Slot →
+        </a>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+<script>
+  // Interactive Triage Island Logic
+  document.addEventListener('DOMContentLoaded', () => {
+    let selectedType = 'Single Family';
+    let selectedCounty = 'Dallas County';
+    let selectedUrgency = 'Active Option Period (Same-Day)';
+
+    function updateTriageState() {
+      const typeBtns = document.querySelectorAll('.triage-btn');
+      typeBtns.forEach(btn => {
+        const isMatch = btn.getAttribute('data-type') === selectedType;
+        btn.className = isMatch 
+          ? 'triage-btn active px-3 py-2.5 rounded-xl text-xs font-semibold border transition-all text-left bg-blue-600 text-white border-blue-400 shadow-md shadow-blue-600/30'
+          : 'triage-btn px-3 py-2.5 rounded-xl text-xs font-semibold border transition-all text-left bg-slate-900/80 text-slate-300 border-slate-700/80 hover:border-slate-500';
+      });
+
+      const countyBtns = document.querySelectorAll('.county-btn');
+      countyBtns.forEach(btn => {
+        const isMatch = btn.getAttribute('data-county') === selectedCounty;
+        btn.className = isMatch 
+          ? 'county-btn active px-3 py-2.5 rounded-xl text-xs font-semibold border transition-all text-left bg-blue-600 text-white border-blue-400 shadow-md shadow-blue-600/30'
+          : 'county-btn px-3 py-2.5 rounded-xl text-xs font-semibold border transition-all text-left bg-slate-900/80 text-slate-300 border-slate-700/80 hover:border-slate-500';
+      });
+
+      const urgencyBtns = document.querySelectorAll('.urgency-btn');
+      urgencyBtns.forEach(btn => {
+        const isMatch = btn.getAttribute('data-urgency') === selectedUrgency;
+        btn.className = isMatch 
+          ? 'urgency-btn active flex-1 px-3 py-2.5 rounded-xl text-xs font-semibold border transition-all text-center bg-blue-600 text-white border-blue-400 shadow-md shadow-blue-600/30'
+          : 'urgency-btn flex-1 px-3 py-2.5 rounded-xl text-xs font-semibold border transition-all text-center bg-slate-900/80 text-slate-300 border-slate-700/80 hover:border-slate-500';
+      });
+
+      const statusPill = document.getElementById('triage-status-pill');
+      if (statusPill) {
+        statusPill.textContent = `SAME-DAY DISPATCH ACTIVE IN ${selectedCounty.toUpperCase()}`;
+      }
+
+      const resultText = document.getElementById('triage-result-text');
+      if (resultText) {
+        resultText.textContent = selectedUrgency.includes('Same-Day') 
+          ? `Same-Day Stamped PE Report for ${selectedType}` 
+          : `Comprehensive 24-48h Stamped Review for ${selectedType}`;
+      }
+
+      // Pre-fill target form if present
+      const formServiceSelect = document.getElementById('service-type') as HTMLSelectElement | null;
+      if (formServiceSelect) {
+        for (let i = 0; i < formServiceSelect.options.length; i++) {
+          if (formServiceSelect.options[i].text.includes(selectedType)) {
+            formServiceSelect.selectedIndex = i;
+            break;
+          }
+        }
+      }
+    }
+
+    document.querySelectorAll('.triage-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        selectedType = btn.getAttribute('data-type') || 'Single Family';
+        updateTriageState();
+      });
+    });
+
+    document.querySelectorAll('.county-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        selectedCounty = btn.getAttribute('data-county') || 'Dallas County';
+        updateTriageState();
+      });
+    });
+
+    document.querySelectorAll('.urgency-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        selectedUrgency = btn.getAttribute('data-urgency') || 'Active Option Period (Same-Day)';
+        updateTriageState();
+      });
+    });
+  });
+</script>

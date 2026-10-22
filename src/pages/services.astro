@@ -1,0 +1,135 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const services = [
+  {
+    title: "Single Family Residential",
+    desc: "Comprehensive foundation and framing inspections for single-family homes. Identifying settlement issues, slab deflection, sheetrock cracking, and door misalignments.",
+    icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>`,
+    badge: "Residential"
+  },
+  {
+    title: "Multi Family Residential",
+    desc: "Structural engineering assessments for duplexes, townhomes, and multi-unit apartment complexes. Providing thorough structural integrity analysis across connected foundations.",
+    icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>`,
+    badge: "Multi-Unit"
+  },
+  {
+    title: "Commercial Inspections",
+    desc: "Rigorous evaluation for retail centers, offices, industrial spaces, and warehouses. Certified PE reports tailored for commercial loans, acquisitions, and compliance audits.",
+    icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>`,
+    badge: "Commercial"
+  },
+  {
+    title: "New Construction",
+    desc: "Pre-pour foundation inspections, post-tension cable verification, framing compliance reviews, and final structural sign-offs before drywall installation.",
+    icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z"/>`,
+    badge: "Construction"
+  },
+  {
+    title: "Remodeling Structural Reviews",
+    desc: "Load-bearing wall removal consultations, structural beam sizing (LVL, steel), open-concept modifications, and architectural plan validations.",
+    icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"/>`,
+    badge: "Remodeling"
+  },
+  {
+    title: "Additions & Expansions",
+    desc: "Engineering design and foundation tying evaluations for second-story additions, garage conversions, sunrooms, and building extensions.",
+    icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"/>`,
+    badge: "Expansions"
+  }
+];
+---
+
+<Layout title="Services - Foundation Structural Inspections & Recommendations">
+  <!-- Header Banner -->
+  <section class="bg-gradient-to-b from-slate-900 to-slate-800 text-white py-16 lg:py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-400/20 text-blue-300 text-xs font-semibold uppercase tracking-wider mb-4">
+        Our Specializations
+      </div>
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight">
+        Foundation Structural Inspections & Recommendations
+      </h1>
+      <p class="mt-4 text-base sm:text-lg text-slate-300 max-w-3xl mx-auto">
+        Certified engineering evaluations and independent technical reports tailored to protect your structural investment.
+      </p>
+    </div>
+  </section>
+
+  <!-- Services Grid -->
+  <section class="py-16 lg:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {services.map((service) => (
+        <div class="glass-card rounded-2xl border border-slate-700/80 p-8 hover:border-blue-500/50 hover:shadow-xl hover:shadow-blue-500/10 transition-all group flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-6">
+              <div class="w-12 h-12 rounded-xl bg-blue-600/20 text-blue-400 flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white transition-colors duration-200 border border-blue-500/30">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" set:html={service.icon} />
+              </div>
+              <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-slate-900 text-slate-300 border border-slate-800 font-telemetry group-hover:border-blue-500/40 transition-colors">
+                {service.badge}
+              </span>
+            </div>
+
+            <h3 class="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors">
+              {service.title}
+            </h3>
+
+            <p class="text-slate-300 text-sm leading-relaxed mb-6">
+              {service.desc}
+            </p>
+          </div>
+
+          <a 
+            href="/contact-us" 
+            class="inline-flex items-center text-sm font-semibold text-blue-400 hover:text-blue-300 transition-colors mt-auto font-telemetry"
+          >
+            Request Inspection
+            <svg class="w-4 h-4 ml-1.5 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      ))}
+    </div>
+
+    <!-- What each inspection includes -->
+    <div class="mt-20 bg-slate-900 rounded-3xl text-white p-8 sm:p-12 border border-slate-800 shadow-2xl">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <div class="lg:col-span-7 space-y-4">
+          <span class="text-xs font-bold text-blue-400 uppercase tracking-widest">Included in Every Inspection</span>
+          <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight">Comprehensive Engineering Deliverables</h2>
+          <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+            Unlike standard home inspectors, an FSI inspection is performed or reviewed by a licensed Professional Engineer (PE). We provide objective, unbiased diagnostics with zero conflict of interest — we do not sell foundation repairs, we only deliver accurate science.
+          </p>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 text-sm text-slate-200">
+            <div class="flex items-center gap-2">
+              <svg class="w-4 h-4 text-emerald-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              <span>Digital Manometer Elevation Mapping</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <svg class="w-4 h-4 text-emerald-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              <span>Official PE Stamped Documents</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <svg class="w-4 h-4 text-emerald-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              <span>Clear Repair Recommendations</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <svg class="w-4 h-4 text-emerald-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              <span>Same-Day Digital Delivery Available</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-5 text-center lg:text-right">
+          <a 
+            href="/contact-us" 
+            class="inline-flex items-center justify-center px-8 py-4 rounded-xl font-bold text-white bg-blue-600 hover:bg-blue-500 shadow-xl shadow-blue-600/30 transition-all hover:scale-105"
+          >
+            Book Your Engineering Review
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

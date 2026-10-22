@@ -1,0 +1,83 @@
+---
+// src/components/Footer.astro
+---
+
+<footer class="bg-[#030712] text-slate-400 border-t border-slate-800/80 pt-16 pb-24 md:pb-16">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-10">
+      
+      <!-- Col 1: Brand & Certification (5 Cols) -->
+      <div class="md:col-span-5 space-y-4">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-600 to-blue-800 flex items-center justify-center text-white font-extrabold text-lg shadow-md">
+            FSI
+          </div>
+          <div>
+            <span class="block text-lg font-black text-white tracking-tight uppercase leading-tight">
+              Foundation Structure Inspection
+            </span>
+            <span class="block text-[11px] font-telemetry uppercase tracking-widest text-blue-400 font-semibold">
+              Texas Board of Professional Engineers Certified
+            </span>
+          </div>
+        </div>
+
+        <p class="text-xs text-slate-400 leading-relaxed max-w-sm">
+          FSI provides objective, independent structural and foundation diagnostics. FSI is not a foundation repair contractor and does not sell, bid on, or perform foundation repairs.
+        </p>
+
+        <div class="p-3 rounded-xl bg-slate-900 border border-slate-800 text-[11px] font-telemetry text-slate-300">
+          Official Engineering Seal (PE) affixed to all final technical reports.
+        </div>
+      </div>
+
+      <!-- Col 2: Services (3 Cols) -->
+      <div class="md:col-span-3 space-y-3">
+        <h4 class="text-xs font-telemetry uppercase tracking-wider text-white font-bold">
+          Core Services
+        </h4>
+        <ul class="space-y-2 text-xs text-slate-400">
+          <li><a href="#services" class="hover:text-blue-400 transition-colors">Single Family Residential</a></li>
+          <li><a href="#services" class="hover:text-blue-400 transition-colors">Commercial & Industrial</a></li>
+          <li><a href="#services" class="hover:text-blue-400 transition-colors">Multi-Family & Townhomes</a></li>
+          <li><a href="#services" class="hover:text-blue-400 transition-colors">New Construction Pre-Pour</a></li>
+          <li><a href="#services" class="hover:text-blue-400 transition-colors">Load-Bearing Wall Removal</a></li>
+          <li><a href="#services" class="hover:text-blue-400 transition-colors">Additions & Foundation Tying</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 3: Contact & Hours (4 Cols) -->
+      <div class="md:col-span-4 space-y-3">
+        <h4 class="text-xs font-telemetry uppercase tracking-wider text-white font-bold">
+          Dispatch & Inquiries
+        </h4>
+        <div class="space-y-2 text-xs font-telemetry text-slate-300">
+          <p class="flex items-center gap-2">
+            <svg class="w-4 h-4 text-blue-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+            </svg>
+            <a href="mailto:Info@foundationstructureinspection.com" class="hover:text-white transition-colors">
+              Info@foundationstructureinspection.com
+            </a>
+          </p>
+          <p class="flex items-center gap-2 text-slate-400">
+            <svg class="w-4 h-4 text-blue-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+            Monday – Saturday: 8:00 AM – 6:00 PM
+          </p>
+          <p class="text-slate-400 pt-1">
+            Service Coverage: Dallas, Tarrant, Collin, Denton, Rockwall, and Kaufman Counties.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Legal Sub-bar -->
+    <div class="mt-12 pt-8 border-t border-slate-900 flex flex-col sm:flex-row justify-between items-center gap-4 text-[11px] font-telemetry text-slate-500">
+      <p>© 2026 Foundation Structure Inspection (FSI). All rights reserved.</p>
+      <p>Licensed Professional Engineers (PE) in the State of Texas</p>
+    </div>
+  </div>
+</footer>
